@@ -44,6 +44,7 @@ public abstract class AbstractAPIRequest<T extends APIResponse> implements APIRe
 	public AbstractAPIRequest(String apiMethodName, String method) {
 		this.apiMethodName = apiMethodName;
 		this.httpRequest = HttpRequestFactory.create(apiMethodName, method);
+		httpRequest.setContentType("application/json");//默认为json请求
 	}
 	
 	@Override

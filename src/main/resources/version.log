@@ -2,3 +2,7 @@
 
 2020-03-25 v->1.0.1 
 	1、新增create、modify、delete的抽象响应
+
+2020-03-27 v->1.0.2
+	1、APIRequest默认请求类型为application/json
+	2、新增AbstractUploadFileAPIRequest。此类将默认请求类型给去掉了
