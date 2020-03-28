@@ -12,7 +12,6 @@ import java.util.Objects;
 import org.apache.commons.lang3.StringUtils;
 import org.yelong.http.request.HttpRequest;
 
-import com.google.gson.Gson;
 import com.labbol.api.support.exception.APIRuleException;
 import com.labbol.api.support.request.queryinfo.QueryFilterInfo;
 import com.labbol.api.support.request.queryinfo.QueryInfo;
@@ -26,8 +25,6 @@ import com.labbol.api.support.response.QueryAPIResponse;
  */
 public abstract class AbstractQueryAPIRequest <T extends QueryAPIResponse<?>> extends AbstractAPIRequest<T> implements QueryAPIRequest<T>{
 
-	private static final Gson gson = new Gson();
-	
 	private QueryInfo queryInfo;
 	
 	public AbstractQueryAPIRequest(String apiMethodName, String method) {

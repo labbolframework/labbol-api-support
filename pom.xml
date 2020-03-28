@@ -4,7 +4,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.github.labbolframework</groupId>
 	<artifactId>labbol-api-support</artifactId>
-	<version>1.0.3</version>
+	<version>1.0.4</version>
 	<name>com.github.labbolframework.labbol-api-support</name>
 	<url>https://github.com/labbolframework/labbol-api-support.git</url>
 	<description>
@@ -63,8 +63,6 @@
 			<scope>provided</scope>
 		</dependency>
 	</dependencies>
-
-
 	<profiles>
 		<profile>
 			<id>release</id>

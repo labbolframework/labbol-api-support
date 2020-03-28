@@ -10,6 +10,7 @@ import org.yelong.http.response.HttpResponse;
 
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
+import com.labbol.api.support.Constants;
 import com.labbol.api.support.utils.GsonHolder;
 
 /**
@@ -46,7 +47,9 @@ public class AbstractAPIResponse implements APIResponse{
 		} catch (Exception e) {
 			
 		}
-		
+		if( null == errorMsg ) {
+			errorMsg = Constants.DEFAULT_ERROR_MSG;
+		}
 	}
 
 	@Override

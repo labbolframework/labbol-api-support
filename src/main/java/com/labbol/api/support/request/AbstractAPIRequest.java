@@ -13,6 +13,7 @@ import com.google.gson.Gson;
 import com.labbol.api.support.exception.APIException;
 import com.labbol.api.support.exception.APIRuleException;
 import com.labbol.api.support.response.APIResponse;
+import com.labbol.api.support.utils.GsonHolder;
 
 /**
  * @author pengfei<yl1430834495@163.com>
@@ -26,7 +27,7 @@ public abstract class AbstractAPIRequest<T extends APIResponse> implements APIRe
 	
 	public static final String SCHEMA_KEY = "";
 	
-	protected static final Gson gson = new Gson();
+	protected final Gson gson = GsonHolder.getGson();
 	
 	private String apiMethodName;
 	

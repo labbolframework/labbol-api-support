@@ -1,6 +1,5 @@
-package com.labbol.api.support.sign;
+package com.labbol.api.support.sign.other;
 
-import java.io.UnsupportedEncodingException;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.util.Arrays;
@@ -18,11 +17,11 @@ import org.apache.commons.lang3.StringUtils;
  */
 public final class SignSupportUtils {
 	
-	//private static final Logger logger = LoggerFactory.getLogger(SignSupportUtils.class);
-	
 //	public static void main(String[] args) throws Exception {
+//		//4E31E9F5F604336178C8951CFC3FFABD
+//		
 //		Map<String, String> headerMap = new HashMap<String, String>(); 
-//		headerMap.put("timestamp", "1583997951719");
+////		headerMap.put("timestamp", "1583997951719");
 //		headerMap.put("timestamp", "1583997951719");
 //		headerMap.put("schemaTag", "labbol");
 //		headerMap.put("appKey", "labbol");
@@ -30,7 +29,7 @@ public final class SignSupportUtils {
 //		String appSecret = "labbol_secret";
 //		System.out.println(generateSign( new HashMap<String, String>(), headerMap, body, appSecret));
 //	}
-	
+//	
 	private static final String MD5 = "MD5";
 	
 	/**
@@ -64,24 +63,21 @@ public final class SignSupportUtils {
 		return encryptMap(requestMap);
 	}
 	
-	private static String encryptMap(Map<String, String> map) throws NoSuchAlgorithmException, UnsupportedEncodingException {
+	private static String encryptMap(Map<String, String> map) throws NoSuchAlgorithmException {
 		String md5Str = null;
 		StringBuilder encryptStr = new StringBuilder();
 		if(!map.isEmpty()) {
-			//logger.info("参与生成sign的值=======================" + map.toString());
-			System.out.println("参与生成sign的值=======================" + map.toString());
 			String []keys = (String[]) map.keySet().toArray(new String[0]);
 			Arrays.sort(keys);
 			for(String key :keys) {
 				String value = map.get(key);
-				if(StringUtils.isNotBlank(value))
-					encryptStr.append(key).append(value);
+				if(StringUtils.isNoneBlank(value))
+				encryptStr.append(key).append(value);
 			}
-			//logger.info("sign的值======================" + encryptStr.toString());
-			System.out.println("sign的值======================" + encryptStr.toString());
+			System.out.println(encryptStr.toString());
 			MessageDigest md = MessageDigest.getInstance(MD5);
 			//使用指定byte[]更新摘要
-			md.update(encryptStr.toString().getBytes("utf-8"));
+			md.update(encryptStr.toString().getBytes());
 			//完成计算，返回指定结果数组
 			byte[] b = md.digest();
 			md5Str = byteArrayToHex(b);

@@ -23,7 +23,7 @@ public class QueryFilterInfo {
 	
 	private String groupName;
 	
-	private Class<?> fieldType;
+	private transient Class<?> fieldType;
 
 	private String fieldTypeStr;
 	
