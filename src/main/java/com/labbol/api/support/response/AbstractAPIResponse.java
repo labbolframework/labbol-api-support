@@ -10,6 +10,7 @@ import org.yelong.http.response.HttpResponse;
 
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
+import com.labbol.api.support.utils.GsonHolder;
 
 /**
  * @author pengfei<yl1430834495@163.com>
@@ -18,7 +19,7 @@ import com.google.gson.reflect.TypeToken;
  */
 public class AbstractAPIResponse implements APIResponse{
 
-	protected static final Gson gson = new Gson();
+	protected final Gson gson = GsonHolder.getGson();
 	
 	private static final String ERROR_RESPONSE_ROOT_NODE = "error_response";
 	

@@ -4,7 +4,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.github.labbolframework</groupId>
 	<artifactId>labbol-api-support</artifactId>
-	<version>1.0.2</version>
+	<version>1.0.3</version>
 	<name>com.github.labbolframework.labbol-api-support</name>
 	<url>https://github.com/labbolframework/labbol-api-support.git</url>
 	<description>
@@ -16,13 +16,11 @@
 			<email>17601085125@163.com</email>
 		</developer>
 	</developers>
-
 	<scm>
 		<connection>scm:git:https://github.com/labbolframework/labbol-api-support</connection>
 		<url>https://github.com/labbolframework/labbol-api-support</url>
 		<developerConnection>scm:git:https://github.com/labbolframework/labbol-api-support</developerConnection>
 	</scm>
-
 	<licenses>
 		<license>
 			<name>Apache License, Version 2.0</name>
@@ -31,12 +29,20 @@
 			<comments>license</comments>
 		</license>
 	</licenses>
-
+	<properties>
+		<yelong-http.version>1.0.0</yelong-http.version>
+		<yelong-support.version>1.0.1</yelong-support.version>
+	</properties>
 	<dependencies>
 		<dependency>
 			<groupId>com.github.yelong0216</groupId>
 			<artifactId>yelong-http</artifactId>
-			<version>1.0.0</version>
+			<version>${yelong-http.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.github.yelong0216</groupId>
+			<artifactId>yelong-support</artifactId>
+			<version>${yelong-support.version}</version>
 		</dependency>
 		<!-- https://mvnrepository.com/artifact/com.google.code.gson/gson -->
 		<dependency>
