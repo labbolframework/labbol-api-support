@@ -12,3 +12,6 @@
 	
 2020-03-28 v->1.0.4
 	1、修改sign的验证
+	
+2020-03-30 v->1.0.5
+	1、修复QueryAPIResponse.getRoot()返回Map的问题
