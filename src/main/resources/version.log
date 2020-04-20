@@ -15,3 +15,6 @@
 	
 2020-03-30 v->1.0.5
 	1、修复QueryAPIResponse.getRoot()返回Map的问题
+	
+2020-04-20 -> 1.0.6
+	1、新增com.labbol.api.suppoprt.response.defaults包
