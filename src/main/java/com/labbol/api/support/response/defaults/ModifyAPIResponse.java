@@ -9,7 +9,6 @@ import com.labbol.api.support.response.AbstractModifyAPIResponse;
 
 /**
  * @author PengFei
- *
  */
 public class ModifyAPIResponse extends AbstractModifyAPIResponse {
 

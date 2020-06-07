@@ -13,7 +13,8 @@ import com.google.gson.reflect.TypeToken;
 
 /**
  * 创建api响应默认实现
- * @author 14308
+ * 
+ * @author PengFei
  */
 public abstract class AbstractCreateAPIResponse extends AbstractAPIResponse{
 

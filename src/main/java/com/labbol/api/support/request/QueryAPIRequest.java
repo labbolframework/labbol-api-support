@@ -27,8 +27,6 @@ import com.labbol.api.support.response.QueryAPIResponse;
  * }
  * 
  * @author PengFei
- * @date 2020年3月5日上午8:35:02
- * @since 1.0
  */
 public interface QueryAPIRequest <T extends QueryAPIResponse<?>> extends APIRequest<T>{
 
@@ -42,12 +40,6 @@ public interface QueryAPIRequest <T extends QueryAPIResponse<?>> extends APIRequ
 	
 	QueryAPIRequest<T> addQueryFilterInfos(List<QueryFilterInfo> queryFilterInfos);
 	
-	/**
-	 * 
-	 * @param fieldName 字段
-	 * @param operator
-	 * @return
-	 */
 	QueryAPIRequest<T> addQueryFilterInfo(String fieldName , String operator);
 	
 	QueryAPIRequest<T> addQueryFilterInfo(String fieldName , String operator , Object value);

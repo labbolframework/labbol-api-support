@@ -7,8 +7,6 @@ import java.util.List;
 
 /**
  * @author PengFei
- * @date 2020年3月6日下午12:19:40
- * @since 1.0
  */
 public class QueryResult <T>{
 	

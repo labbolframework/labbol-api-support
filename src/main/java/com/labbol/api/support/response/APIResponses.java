@@ -12,7 +12,6 @@ import com.labbol.api.support.response.support.QueryResults;
 
 /**
  * @author PengFei
- *
  */
 public final class APIResponses {
 	

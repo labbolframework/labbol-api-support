@@ -7,9 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * @author 彭飞
- * @date 2019年10月22日下午2:40:18
- * @version 1.2
+ * @author PengFei
  */
 public class QueryInfo {
 
@@ -51,8 +49,7 @@ public class QueryInfo {
 	
 	/**
 	 * 是否存在条件
-	 * @date 2019年11月12日下午6:09:05
-	 * @version 1.2
+	 * 
 	 * @return <tt>true</tt> 存在条件
 	 */
 	public boolean isFilter() {
@@ -62,9 +59,8 @@ public class QueryInfo {
 
 	/**
 	 * 设置排序信息。这会覆盖原有的排序信息
-	 * @date 2019年11月12日下午5:32:38
-	 * @version 1.2
-	 * @param sorters
+	 * 
+	 * @param sorters 排序集合
 	 */
 	public void setSorters(List<QuerySortInfo> sorters) {
 		this.sorters = sorters;
@@ -72,9 +68,7 @@ public class QueryInfo {
 	
 	/**
 	 * 是否存在排序
-	 * @author 彭飞
-	 * @date 2019年10月23日下午12:02:52
-	 * @version 1.0
+	 * 
 	 * @return <tt>true</tt>存在排序
 	 */
 	public boolean isSort() {
@@ -83,11 +77,8 @@ public class QueryInfo {
 	
 	/**
 	 * 添加一个排序
-	 * @author 彭飞
-	 * @date 2019年10月23日下午12:04:20
-	 * @version 1.0
-	 * @param sortField
-	 * @param direction
+	 * 
+	 * @param querySortInfo 排序信息
 	 */
 	public void addSort(QuerySortInfo querySortInfo) {
 		this.sorters.add(querySortInfo);
@@ -95,11 +86,9 @@ public class QueryInfo {
 	
 	/**
 	 * 添加一个排序
-	 * @author 彭飞
-	 * @date 2019年10月23日下午12:04:20
-	 * @version 1.0
-	 * @param sortField
-	 * @param direction
+	 * 
+	 * @param sortField 排序的列
+	 * @param direction 方向（DESC、ASC）
 	 */
 	public void addSort(String sortField,String direction) {
 		this.sorters.add(new QuerySortInfo(sortField,direction));
@@ -107,9 +96,11 @@ public class QueryInfo {
 	
 	/**
 	 * 添加一个排序条件
-	 * @param queryFilterInfo
+	 * 
+	 * @param queryFilterInfo 过滤信息
 	 */
 	public void addFilter(QueryFilterInfo queryFilterInfo) {
 		this.filters.add(queryFilterInfo);
 	}
+	
 }

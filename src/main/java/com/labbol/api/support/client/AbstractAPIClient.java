@@ -15,8 +15,6 @@ import com.labbol.api.support.response.APIResponseInterceptor;
 
 /**
  * @author PengFei
- * @date 2020年3月5日上午10:53:46
- * @since 1.0
  */
 public abstract class AbstractAPIClient implements APIClient{
 

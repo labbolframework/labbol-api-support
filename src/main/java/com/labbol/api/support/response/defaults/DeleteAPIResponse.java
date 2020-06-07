@@ -9,7 +9,6 @@ import com.labbol.api.support.response.AbstractDeleteAPIResponse;
 
 /**
  * @author PengFei
- *
  */
 public class DeleteAPIResponse extends AbstractDeleteAPIResponse{
 

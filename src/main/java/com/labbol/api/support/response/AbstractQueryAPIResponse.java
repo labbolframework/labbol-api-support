@@ -18,14 +18,13 @@ import org.apache.commons.beanutils.Converter;
 import org.apache.commons.collections.MapUtils;
 import org.apache.commons.lang3.reflect.TypeUtils;
 import org.apache.commons.lang3.time.DateUtils;
+import org.yelong.commons.util.Dates;
 import org.yelong.http.response.HttpResponse;
 
 import com.labbol.api.support.response.support.QueryResult;
 
 /**
  * @author PengFei
- * @date 2020年3月11日上午9:15:39
- * @since 1.0
  */
 public class AbstractQueryAPIResponse<T> extends AbstractAPIResponse implements QueryAPIResponse<T>{
 
@@ -46,7 +45,7 @@ public class AbstractQueryAPIResponse<T> extends AbstractAPIResponse implements 
 					throw new RuntimeException("只能将字符串类型转换为java.util.Date类型");
 				}
 				try {
-					return (T)DateUtils.parseDate((String)value, "yyyy-MM-dd HH:mm:ss","yyyy-MM-dd");
+					return (T)DateUtils.parseDate((String)value, Dates.YYYY_MM_DD_HH_MM_SS,Dates.YYYY_MM_DD_BAR,Dates.YYYY_MM_DD_SLASH);
 				} catch (ParseException e) {
 					throw new RuntimeException(e);
 				}

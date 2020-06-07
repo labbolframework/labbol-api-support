@@ -4,7 +4,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.github.labbolframework</groupId>
 	<artifactId>labbol-api-support</artifactId>
-	<version>1.0.6</version>
+	<version>1.1.0</version>
 	<name>com.github.labbolframework.labbol-api-support</name>
 	<url>https://github.com/labbolframework/labbol-api-support.git</url>
 	<description>
@@ -31,7 +31,8 @@
 	</licenses>
 	<properties>
 		<yelong-http.version>1.0.0</yelong-http.version>
-		<yelong-support.version>1.0.1</yelong-support.version>
+		<yelong-commons.version>1.2.0</yelong-commons.version>
+		<yelong-support.version>1.2.0</yelong-support.version>
 		<commons-beanutils.version>1.9.4</commons-beanutils.version>
 	</properties>
 	<dependencies>
@@ -39,6 +40,11 @@
 			<groupId>com.github.yelong0216</groupId>
 			<artifactId>yelong-http</artifactId>
 			<version>${yelong-http.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.github.yelong0216</groupId>
+			<artifactId>yelong-commons</artifactId>
+			<version>${yelong-commons.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>com.github.yelong0216</groupId>

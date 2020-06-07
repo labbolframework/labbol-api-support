@@ -8,7 +8,6 @@ import java.util.List;
 
 /**
  * @author PengFei
- *
  */
 public final class QueryResults {
 	

@@ -9,7 +9,6 @@ import com.labbol.api.support.response.AbstractCreateAPIResponse;
 
 /**
  * @author PengFei
- *
  */
 public class CreateAPIResponse extends AbstractCreateAPIResponse{
 

@@ -13,9 +13,7 @@ import com.labbol.api.support.exception.APIRuleException;
 import com.labbol.api.support.response.APIResponse;
 
 /**
- * @author pengfei<yl1430834495@163.com>
- * @date 2020年3月3日上午10:12:55
- * @version 
+ * @author PengFei
  */
 public interface APIRequest <T extends APIResponse>{
 

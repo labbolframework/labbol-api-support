@@ -4,13 +4,10 @@
 package com.labbol.api.support.request.queryinfo;
 
 /**
- * @author pengfei<yl1430834495@163.com>
- * @date 2019年11月12日下午5:31:33
- * @version 1.2
+ * @author PengFei
  */
 public class QuerySortInfo {
 
-	
 	private String sortField;
 	
 	private String direction;

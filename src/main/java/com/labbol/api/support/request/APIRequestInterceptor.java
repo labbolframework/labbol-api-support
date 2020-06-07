@@ -10,17 +10,16 @@ import com.labbol.api.support.response.APIResponse;
 
 /**
  * @author PengFei
- * @date 2020年3月5日上午10:50:41
- * @since 1.0
  */
 public interface APIRequestInterceptor {
 
 	/**
 	 * 在请求之前执行
 	 * 此方法将在APIRequest未初始化时进行调用。
-	 * @param request
-	 * @throws APIException
-	 * @throws IOException
+	 * 
+	 * @param request request
+	 * @throws APIException API异常
+	 * @throws IOException 流异常
 	 */
 	void process(APIRequest<? extends APIResponse> request) throws APIException, IOException;
 

@@ -16,9 +16,7 @@ import com.labbol.api.support.response.APIResponse;
 import com.labbol.api.support.utils.GsonHolder;
 
 /**
- * @author pengfei<yl1430834495@163.com>
- * @date 2020年3月3日下午3:51:03
- * @version 
+ * @author PengFei
  */
 public abstract class AbstractAPIRequest<T extends APIResponse> implements APIRequest<T>{
 

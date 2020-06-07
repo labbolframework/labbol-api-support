@@ -4,9 +4,7 @@
 package com.labbol.api.support.exception;
 
 /**
- * @author pengfei<yl1430834495@163.com>
- * @date 2020年3月3日下午3:37:33
- * @version 
+ * @author PengFei
  */
 public class APIRuleException extends APIException{
 
@@ -29,4 +27,5 @@ public class APIRuleException extends APIException{
 	public String getMessage() {
 		return message;
 	}
+	
 }

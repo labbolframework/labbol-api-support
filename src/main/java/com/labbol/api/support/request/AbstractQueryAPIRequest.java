@@ -20,8 +20,6 @@ import com.labbol.api.support.response.QueryAPIResponse;
 
 /**
  * @author PengFei
- * @date 2020年3月5日上午8:49:03
- * @since 1.0
  */
 public abstract class AbstractQueryAPIRequest <T extends QueryAPIResponse<?>> extends AbstractAPIRequest<T> implements QueryAPIRequest<T>{
 

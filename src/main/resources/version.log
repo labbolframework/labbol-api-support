@@ -18,3 +18,6 @@
 	
 2020-04-20 -> 1.0.6
 	1、新增com.labbol.api.suppoprt.response.defaults包
+	
+2020-06-07 -> 1.1.0
+	1、兼容yelong-*-1.2.0

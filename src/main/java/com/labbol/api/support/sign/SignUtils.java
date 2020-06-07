@@ -5,8 +5,6 @@ package com.labbol.api.support.sign;
 
 /**
  * @author PengFei
- * @date 2020年3月10日上午10:26:31
- * @since 1.0
  */
 public class SignUtils {
 

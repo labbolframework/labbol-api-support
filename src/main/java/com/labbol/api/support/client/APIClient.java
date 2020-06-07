@@ -15,9 +15,7 @@ import com.labbol.api.support.response.APIResponse;
 import com.labbol.api.support.response.APIResponseInterceptor;
 
 /**
- * @author pengfei<yl1430834495@163.com>
- * @date 2020年3月3日上午9:03:37
- * @version 
+ * @author PengFei
  */
 public interface APIClient {
 	
@@ -25,37 +23,39 @@ public interface APIClient {
 
 	/**
 	 * 添加请求拦截器
-	 * @param APIRequestInterceptor
+	 * 
+	 * @param APIRequestInterceptor 请求拦截器
 	 */
 	void addAPIRequestInterceptor(APIRequestInterceptor APIRequestInterceptor);
 	
 	/**
 	 * 移除请求拦截器
-	 * @param APIRequestInterceptor
+	 * 
+	 * @param APIRequestInterceptor 请求拦截器
 	 */
 	void removeAPIRequestInterceptor(APIRequestInterceptor APIRequestInterceptor);
 	
 	/**
-	 * 获取所有请求拦截器
-	 * @return
+	 * @return 所有的请求拦截器
 	 */
 	List<APIRequestInterceptor> getAPIRequestInterceptors();
 	
 	/**
 	 * 添加响应拦截器
-	 * @param APIResponseInterceptor
+	 * 
+	 * @param APIResponseInterceptor 响应拦截器
 	 */
 	void addAPIResponseInterceptor(APIResponseInterceptor APIResponseInterceptor);
 	
 	/**
 	 * 移除响应拦截器
-	 * @param APIResponseInterceptor
+	 * 
+	 * @param APIResponseInterceptor 响应拦截器
 	 */
 	void removeAPIResponseInterceptor(APIResponseInterceptor APIResponseInterceptor);
 	
 	/**
-	 * 获取所有响应拦截器
-	 * @return
+	 * @return 所有的响应拦截器
 	 */
 	List<APIResponseInterceptor> getAPIResponseInterceptors();
 	

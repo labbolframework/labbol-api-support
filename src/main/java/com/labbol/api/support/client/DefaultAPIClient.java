@@ -20,9 +20,7 @@ import com.labbol.api.support.response.APIResponseInterceptor;
 import com.labbol.api.support.sign.SignSupportUtils;
 
 /**
- * @author pengfei<yl1430834495@163.com>
- * @date 2020年3月3日下午4:11:35
- * @version 
+ * @author PengFei
  */
 public class DefaultAPIClient extends AbstractAPIClient{
 

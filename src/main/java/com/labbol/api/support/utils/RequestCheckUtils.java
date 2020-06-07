@@ -3,20 +3,18 @@
  */
 package com.labbol.api.support.utils;
 
-import java.beans.PropertyDescriptor;
-import java.lang.reflect.Method;
+import org.yelong.commons.beans.BeanUtilsE;
 
 import com.labbol.api.support.exception.APIRuleException;
 
 /**
  * @author PengFei
- * @date 2020年3月6日上午10:22:00
- * @since 1.0
  */
 public class RequestCheckUtils {
 
 	/**
 	 * 检查值不能为空
+	 * 
 	 * @param value 值
 	 * @param fieldName 该值对应的字段
 	 * @throws APIRuleException
@@ -33,9 +31,10 @@ public class RequestCheckUtils {
 
 	/**
 	 * 检测对象中的字段是否为非空白
-	 * @param bean
-	 * @param fieldName
-	 * @throws APIRuleException
+	 * 
+	 * @param bean bean 
+	 * @param fieldName 字段名称
+	 * @throws APIRuleException 参数验证失败
 	 */
 	public static void checkBeanFieldNotEmpty(Object bean, String fieldName)throws APIRuleException {
 		Object value = getProperty(bean, fieldName);
@@ -50,9 +49,10 @@ public class RequestCheckUtils {
 	
 	/**
 	 * 检测对象中的所有字段是否为非空白
-	 * @param bean
-	 * @param fieldNames
-	 * @throws APIRuleException
+	 * 
+	 * @param bean bean 
+	 * @param fieldName 字段名称
+	 * @throws APIRuleException 参数验证失败
 	 */
 	public static void checkBeanFieldNotEmpty(Object bean, String [] fieldNames)throws APIRuleException {
 		for (String fieldName : fieldNames) {
@@ -61,17 +61,12 @@ public class RequestCheckUtils {
 	}
 	
 	/**
-	 * 获取对象属性值
-	 * @param bean
-	 * @param propertyName
-	 * @return
+	 * @see BeanUtilsE#getProperty(Object, String)
 	 */
 	private static Object getProperty(Object bean , String propertyName) {
 		try {
-			PropertyDescriptor propertyDescriptor = new PropertyDescriptor(propertyName, bean.getClass());
-			Method readMethod = propertyDescriptor.getReadMethod();
-			return readMethod.invoke(bean);
-		} catch (Exception e) {
+			return BeanUtilsE.getProperty(bean, propertyName);
+		} catch (NoSuchMethodException e) {
 			return null;
 		}
 	}

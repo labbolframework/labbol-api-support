@@ -9,9 +9,7 @@ import org.apache.commons.lang3.ClassUtils;
 import org.apache.commons.lang3.StringUtils;
 
 /**
- * @author 彭飞
- * @date 2019年10月22日下午2:39:11
- * @version 1.2
+ * @author PengFei
  */
 public class QueryFilterInfo {
 	

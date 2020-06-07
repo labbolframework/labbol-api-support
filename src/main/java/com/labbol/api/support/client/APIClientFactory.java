@@ -19,11 +19,8 @@ import com.labbol.api.support.response.APIResponse;
 
 /**
  * @author PengFei
- * @date 2020年3月9日下午6:24:56
- * @since 1.0
  */
 public class APIClientFactory {
-	
 	
 	public static final APIClient createSpringMvcDefaultAPIClient(String serverUrl, String appKey, String appSecret) {
 		try {
@@ -34,9 +31,6 @@ public class APIClientFactory {
 			throw new RuntimeException("当前未使用SpringMvc框架！",e);
 		}
 	}
-	
-	
-	
 	
 	public static final APIClient createDefaultAPIClient(String serverUrl, String appKey, String appSecret,Supplier<HttpServletRequest> requestHolder) {
 		APIClient apiClient = new DefaultAPIClient(serverUrl, appKey, appSecret);
@@ -55,6 +49,5 @@ public class APIClientFactory {
 		});
 		return apiClient;
 	}
-	
 	
 }

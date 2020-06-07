@@ -3,14 +3,13 @@
  */
 package com.labbol.api.support.utils;
 
-import org.yelong.support.json.gson.adapter.IntegerAdapter;
+import org.yelong.support.json.gson.adapter.IntegerTypeAdapter;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
 /**
  * @author PengFei
- *
  */
 public final class GsonHolder {
 
@@ -22,7 +21,7 @@ public final class GsonHolder {
 		Gson gson = GSON.get();
 		if( null == gson ) {
 			GsonBuilder gsonBuilder = new GsonBuilder();
-			gsonBuilder.registerTypeAdapter(Integer.class, new IntegerAdapter());
+			gsonBuilder.registerTypeAdapter(Integer.class, new IntegerTypeAdapter("",null));
 			gson = gsonBuilder.create();
 		}
 		return gson;
