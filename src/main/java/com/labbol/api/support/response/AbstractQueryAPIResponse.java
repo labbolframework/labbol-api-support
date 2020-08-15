@@ -41,6 +41,9 @@ public class AbstractQueryAPIResponse<T> extends AbstractAPIResponse implements 
 				if( null == value ) {
 					return null;
 				}
+				if( value instanceof Date ) {
+					return (T) value;
+				}
 				if( !(value instanceof CharSequence)) {//只能转换字符串类型
 					throw new RuntimeException("只能将字符串类型转换为java.util.Date类型");
 				}
